@@ -7,3 +7,4 @@ import itertools
 from multiprocessing import Pool
 import subprocess
 from scipy.stats.stats import pearsonr
+import networkx as nx
