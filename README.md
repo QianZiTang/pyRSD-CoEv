@@ -71,10 +71,15 @@ The cutoff of p value, default value is 9.33e-10.
 `--fdr`
 The cutoff of fdr, default value is 0.001.
 ## 2.3 Output file
-prefix_output_matrix.txt
-(N+1)*M matrix. n+1:strain numer
-prefix_output__re.txt
-
-prefix_output_cor.txt
-prefix_output_cor_fdr.txt
-prefix_output_net.txt
++ prefix_output_matrix.txt
+(N+1)*M matrix. 
+n+1: the first cloumn is transcript, N is the number of strains
+M: the number of transcript showing NSC or frameshift
++ prefix_output_re.txt
+corrected (N+1)*M matrix
++ prefix_output_cor.txt
+pair-wise transcript Pearson’s correlation and p value
++ prefix_output_cor_fdr.txt
+Transcript pairs with Pearson’s correlation, p value and FDR.
++ prefix_output_net.txt
+Transcript cluster file. Transcript pairs with FDR less than 0.1% will select to construct a network.
