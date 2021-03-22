@@ -37,3 +37,44 @@ strain2	-0.0825	-0.1165	0.2635	-0.0447	-0.1126	-0.1236	0.0674	-0.0288	-0.0185	0.
 ```
 **！！ATTENTION**
 The first column of sample index file a must be the same as the first column of file PCA
+
+## 2.2 Usage
+`coevgeneCluster --sampleindex < sampleindex file> --annotype < vep or ann> --output <prefix output file name> --varianttype <snv or indel> --pca <pca file> --rvalue <default 0.96> --pvalue <default 9.33e-10> --fdr <default 0.001>
+## Required arguments
+`--sampleindex,-s` 
+
+Type: file. 
+Sample index file
+
+`--annotype,-a` 
+
+Type: str. 
+The software you used to predicted functional consequences of variants. Support VEP and ANNOVAR output format. Type 'vep' or 'ann' for this parameter.
+
+`--output,-o`
+Type: str.
+Prefix of output file.
+
+`--varianttype,-v`
+Type: str.
+The type of your variant data, snv or indel.
+
+`--pca,-p`
+PCA file
+## Optional arguments
+`--rvalue`
+The cutoff of Pearson’s correlation coefficient， default value is 0.96.
+
+`--pvalue`
+The cutoff of p value, default value is 9.33e-10.
+
+`--fdr`
+The cutoff of fdr, default value is 0.001.
+## 2.3 Output file
+prefix_output_matrix.txt
+(N+1)*M matrix. n+1:strain numer
+prefix_output__re.txt
+
+prefix_output_cor.txt
+prefix_output_cor_fdr.txt
+prefix_output_net.txt
