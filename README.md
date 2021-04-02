@@ -18,6 +18,9 @@ python setup.py install
 ```
 ## 1. Identification of selective sweeps using relative homozygous SNV density
 
+## 1.1 Usage
+`convertFormat --vcf <file.vcf>` 
+
 
 ## 2. Identification of co-evolve gene cluster
 
