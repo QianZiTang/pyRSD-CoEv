@@ -1,7 +1,7 @@
 # pyRSD-CoEv
 An python package for selection sweep detection and co-evolutionary gene cluster identification
 
-## 00Installation
+## 00 Installation
 ## Requirement
 + numpy>= 1.18.1
 + scipy>=1.4.1
@@ -12,11 +12,11 @@ An python package for selection sweep detection and co-evolutionary gene cluster
 + fdrtool(R package)
 
 ```
-git 
-cd 
+git https://github.com/QianZiTang/pyRSD-CoEv.git
+cd pyRSD-CoEv
 python setup.py install
 ```
-
+## 1. Identification of selective sweeps using relative homozygous SNV density
 
 
 ## 2. Identification of co-evolve gene cluster
