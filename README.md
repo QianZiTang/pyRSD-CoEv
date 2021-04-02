@@ -19,7 +19,11 @@ python setup.py install
 ## 1. Identification of selective sweeps using relative homozygous SNV density
 
 ## 1.1 Usage
-`convertFormat --vcf <file.vcf>` 
+convertFormat
+We provide this function for the preparation of input files. The variant call format (VCF) file is supported. All polymorphic loci with missing genotypes and/or heterozygous calls in at least one strain is excluded.
+
+```convertFormat --vcf <file.vcf>
+```
 
 
 ## 2. Identification of co-evolve gene cluster
