@@ -20,16 +20,27 @@ python setup.py install
 
 ## 1.1 Usage
 + `convertFormat`  
-We provide this function for the preparation of input files. The variant call format (VCF) file is supported. All polymorphic loci with missing genotypes and/or heterozygous calls in at least one strain is excluded.
+We provide this function for the preparation of input files. The variant call format (VCF) file is supported. All polymorphic loci with missing genotypes and/or heterozygous calls in at least one strain is excluded.  
 
-+ Required arguments
+Required arguments  
 `--vcf <input_filename.vcf> `  
-This step generates two result files (chrom_sizes.txt and input_filename_fliter.txt)
-```
-convertFormat --vcf <file.vcf>
-calculateRsd -i <> --chrom <> --sample_num <> -t <>
+This step generates two result files (chrom_sizes.txt and input_filename_fliter.txt)  
++  `calculateRsd`  
+Required arguments  
+`--input, -i <input_filename>`  
+convertFormat result file (input_filename_fliter.txt) should be used as inputfile for this parameter.  
+`--chrom, -c <chromosome>`  
+Chromosome name. eg chr1  
+`--sample_num, -s <integer>`  
+The number of indivual
 
-```
++ `mergeANDsmooth`
+`--input, -i <input_filename>` 
+`--output, -o <outputfile prefix>`  
+
++ `annotationRSD`  
+`--input, -i <input_filename>` 
+`--gtf, -g <gtf file>`
 
 
 ## 2. Identification of co-evolve gene cluster
@@ -57,7 +68,7 @@ strain2	-0.0825	-0.1165	0.2635	-0.0447	-0.1126	-0.1236	0.0674	-0.0288	-0.0185	0.
 The first column of sample index file a must be the same as the first column of file PCA
 
 ## 2.2 Usage
-`coevgeneCluster --sampleindex < sampleindex file> --annotype < vep or ann> --output <prefix output file name> --varianttype <snv or indel> --pca <pca file> --rvalue <default 0.96> --pvalue <default 9.33e-10> --fdr <default 0.001>
+`coevCluster --sampleindex < sampleindex file> --annotype < vep or ann> --output <prefix output file name> --varianttype <snv or indel> --pca <pca file> --rvalue <default 0.96> --pvalue <default 9.33e-10> --fdr <default 0.001>
 ## Required arguments
 `--sampleindex,-s` 
 
