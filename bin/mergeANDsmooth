@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from pyRSD_CoEv.convertFormat import main
+from pyRSD_CoEv.mergeANDsmooth import main
 
 if __name__ == "__main__":
     main()
