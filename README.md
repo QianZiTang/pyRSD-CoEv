@@ -21,7 +21,7 @@ python setup.py install
 
 ### 1.1 Tools for pre-processing variant call format SNV data：` convertFormat`
 
-The tool is designed for filtering polymorphic sites of missing or heterozygote genotypes in at least one individual. This step generates two result files (chrom_sizes.txt and input_filename_filter.txt) in the input file path. chrom_sizes.txt contains chromosome length information. input_filename_filter.txt is a tab delimited file which contains information about polymorphic sites. The first column indicates chromosome name, the second indicates the position in the chromosome, and the third column is REF/ALT (reference allele/alternate allele). The remaining columns include the genotypical information for each individual. input_filename_filter.txt is used as input file for` calculateRSD` function.
+The tool is designed for filtering polymorphic sites of missing or heterozygote genotypes in at least one individual. This step generates two result files (chrom_sizes.txt and input_filename_filter.txt) in the input file path. chrom_sizes.txt contains chromosome length information. input_filename_filter.txt is a tab delimited file which contains information about polymorphic sites. The first column indicates chromosome name, the second indicates the position in the chromosome, and the third column is REF/ALT (reference allele/alternate allele). The remaining columns include the genotypical information for each individual. input_filename_filter.txt is used as input file for` calculateRSD` function. user can download example file in https://github.com/QianZiTang/pyRSD-CoEv/releases/download/v1.0-alpha/example.rar
 
 - Usage
 `convertFormat –vcf <vcf_filename>`
